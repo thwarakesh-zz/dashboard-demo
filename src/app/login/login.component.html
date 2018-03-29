@@ -1,3 +1,15 @@
-<p>
-  login works!
-</p>
+<div class="login-form-container">
+  <div class="login-form">
+    <img src="assets\img\Stax_white.png">
+    <div style="text-align:center">Business Intelligence</div>
+    <br/>
+    <br/>
+    <div>Username</div>
+    <input type="text" [(ngModel)]="username">
+    <br/>
+    <div>Password</div>
+    <input type="password" [(ngModel)]="password">
+    <br/>
+    <div (click)="login()" class="button">Login</div>
+  </div>
+</div>

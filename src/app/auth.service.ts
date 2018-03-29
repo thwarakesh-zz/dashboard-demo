@@ -8,7 +8,7 @@ import { of } from 'rxjs/observable/of';
 @Injectable()
 export class AuthService {
 
-  public token: string = 'abc';
+  public token: string;
   @Output() loggedIn: EventEmitter<boolean> = new EventEmitter();
 
   constructor(public http: HttpClient) {
@@ -39,11 +39,10 @@ export class AuthService {
   }
 
   logout(): Observable<any>{
-    console.log('logging Out');
-    // this.loggedIn.emit(false); // Should be removed
     return this.http.post('http://127.0.0.1:8000/rest-auth/logout/', {}).pipe(
       map(res=> {
         if (res['detail'] == 'Successfully logged out.'){
+          console.log('logging Out');
           this.token = null;
           this.loggedIn.emit(false);
         }

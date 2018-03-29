@@ -1,5 +1,5 @@
 <div class="navbar">
   <div class="brand">Stax</div>
-  <div class="user">Admin</div>
-  <div class="logout" (click)="logout()"><i class="fas fa-power-off"></i></div>
+  <div class="user" *ngIf="loggedIn">Admin</div>
+  <div class="logout" (click)="logout()" *ngIf="loggedIn"><i class="fas fa-power-off"></i></div>
 </div>

@@ -1,0 +1,53 @@
+$primary-color: #1C2B36;
+$secondary-color: #209e91;
+$space-color: #f0f3f4;
+
+.login-form-container {
+  padding-top: 75px;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: $primary-color;
+  color: $space-color;
+  box-shadow: 2px 0 3px rgba(0,0,0,.5);
+  position: fixed;
+}
+
+.login-form > div {
+  padding: 5px;
+}
+
+.button {
+  border: 1px solid;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.button:hover {
+  box-shadow: 2px 0 3px $space-color;
+  color: $secondary-color;
+}
+
+input {
+  border-radius: 5px;
+}
+
+input:hover {
+  box-shadow: 2px 0 3px $space-color;
+}
+
+img {
+  width: 50px;
+  height: auto;
+  align-self: center;
+}
