@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  private loggedIn: boolean;
+  constructor(public auth:AuthService){
+  }
+
+  ngOnInit(){
+    this.loggedIn = true;
+    this.auth.getLoggedInStatus().subscribe(res => {
+      this.loggedIn = res;
+    })
+  }
 }

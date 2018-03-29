@@ -18,6 +18,10 @@ $space-color: #f0f3f4;
   padding: 5px;
 }
 
+.navbar > div:hover {
+  color: $secondary-color;
+}
+
 .brand{
   margin-left: 1%;
 }

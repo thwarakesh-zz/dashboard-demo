@@ -1,0 +1,26 @@
+$primary-color: #1C2B36;
+$secondary-color: #209e91;
+$space-color: #f0f3f4;
+
+.sidemenu {
+  padding-top: 75px;
+  background-color: $primary-color;
+  width: 180px;
+  color: $space-color;
+  height: 100%;
+}
+
+.sidemenu-content {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-item {
+  padding: 5px;
+}
+
+.menu-item:hover {
+  background-color: $secondary-color;
+}
