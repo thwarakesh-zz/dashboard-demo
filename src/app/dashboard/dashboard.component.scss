@@ -1,0 +1,14 @@
+.key-figures {
+  display: flex;
+  justify-content: space-between;
+  margin: 1%;
+  flex-wrap: wrap;
+}
+
+.key-figure {
+  width: 24%;
+  background-color: white;
+  border-radius: 5px;
+  height: 50px;
+  box-shadow: 2px 0 3px rgba(0,0,0,.5);
+}

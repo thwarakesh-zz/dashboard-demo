@@ -9,6 +9,7 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 
 import { AuthService } from './auth.service';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     NavbarComponent,
     SideMenuComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

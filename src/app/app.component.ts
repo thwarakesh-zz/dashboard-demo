@@ -12,7 +12,7 @@ export class AppComponent {
   }
 
   ngOnInit(){
-    this.loggedIn = false;
+    this.loggedIn = true;
     this.auth.getLoggedInStatus().subscribe(res => {
       this.loggedIn = res;
     })
