@@ -9,6 +9,7 @@ import { of } from 'rxjs/observable/of';
 export class AuthService {
 
   public token: string;
+  @Output() user: EventEmitter<string> = new EventEmitter();
   @Output() loggedIn: EventEmitter<boolean> = new EventEmitter();
 
   constructor(public http: HttpClient) {
@@ -16,6 +17,10 @@ export class AuthService {
 
   getLoggedInStatus(){
     return this.loggedIn;
+  }
+
+  getUser(){
+    return this.user;
   }
 
   login(username: string, password: string):Observable<any>{
@@ -27,6 +32,7 @@ export class AuthService {
         map(res => {
           this.token = res['key'];
           this.loggedIn.emit(true);
+          this.user.emit(username);
         }),
         catchError(this.handleError('login', {}))
       )
@@ -45,6 +51,7 @@ export class AuthService {
           console.log('logging Out');
           this.token = null;
           this.loggedIn.emit(false);
+          this.user.emit(null);
         }
       })
     )

@@ -8,6 +8,7 @@ import { AuthService } from '../auth.service';
 })
 export class NavbarComponent implements OnInit {
   private loggedIn: boolean;
+  private user: string;
 
   constructor(public auth: AuthService) { }
 
@@ -15,11 +16,15 @@ export class NavbarComponent implements OnInit {
     this.auth.getLoggedInStatus().subscribe(res => {
       this.loggedIn = res;
     })
+
+    this.auth.getUser().subscribe(res => {
+      this.user = res;
+    })
   }
 
   logout(){
     this.auth.logout().subscribe(res => {
-      console.log(res);
+      console.log('logged out!');
     })
   }
 
