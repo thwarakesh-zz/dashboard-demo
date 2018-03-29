@@ -1,5 +1,8 @@
 <app-navbar></app-navbar>
-<app-side-menu *ngIf="loggedIn"></app-side-menu>
+<i class="fas fa-bars"></i>
+<div class="sidemenu">
+  <app-side-menu *ngIf="loggedIn"></app-side-menu>
+</div>
 <app-login *ngIf="!loggedIn"></app-login>
 <div class="dashboard">
   <app-dashboard *ngIf="loggedIn"></app-dashboard>

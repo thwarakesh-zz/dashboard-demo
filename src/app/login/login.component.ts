@@ -7,8 +7,8 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  private username: string;
-  private password: string;
+  username: string;
+  password: string;
 
   constructor(public auth: AuthService) { }
 

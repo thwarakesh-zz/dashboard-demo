@@ -2,3 +2,26 @@
   padding-top: 50px;
   padding-left: 180px;
 }
+
+svg {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  svg {
+    display: flex;
+    margin-top: 60px;
+    margin-left: 10px;
+    z-index: 1000;
+    position: fixed;
+  }
+
+  .sidemenu {
+    display: none;
+  }
+
+  .dashboard {
+    padding-top: 50px;
+    padding-left: 0px;
+  }
+}

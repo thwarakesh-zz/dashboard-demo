@@ -7,12 +7,12 @@ import { AuthService } from './auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  private loggedIn: boolean;
+  loggedIn: boolean;
   constructor(public auth:AuthService){
   }
 
   ngOnInit(){
-    this.loggedIn = true;
+    this.loggedIn = false;
     this.auth.getLoggedInStatus().subscribe(res => {
       this.loggedIn = res;
     })
