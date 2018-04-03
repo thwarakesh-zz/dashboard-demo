@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import { MessageService } from './message.service';
 
 @Injectable()
 export class AuthService {
@@ -12,7 +13,7 @@ export class AuthService {
   @Output() user: EventEmitter<string> = new EventEmitter();
   @Output() loggedIn: EventEmitter<boolean> = new EventEmitter();
 
-  constructor(public http: HttpClient) {
+  constructor(public http: HttpClient, public message: MessageService) {
   }
 
   getLoggedInStatus() {
@@ -39,6 +40,7 @@ export class AuthService {
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
+    this.message.setActiveMessage('Login Failed! Please Check your credentials!');
     return (error: any): Observable<T> => {
       return of(result as T);
     };

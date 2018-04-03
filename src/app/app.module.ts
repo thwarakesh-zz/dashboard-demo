@@ -10,6 +10,7 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 import { AuthService } from './auth.service';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MessageService } from './message.service';
 
 
 @NgModule({
@@ -25,7 +26,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    MessageService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,17 +15,17 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.auth.getLoggedInStatus().subscribe(res => {
       this.loggedIn = res;
-    })
+    });
 
     this.auth.getUser().subscribe(res => {
       this.user = res;
-    })
+    });
   }
 
-  logout(){
+  logout() {
     this.auth.logout().subscribe(res => {
       console.log('logged out!');
-    })
+    });
   }
 
 }
