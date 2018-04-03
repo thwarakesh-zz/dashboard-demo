@@ -7,7 +7,7 @@ svg {
   display: none;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   svg {
     display: flex;
     margin-top: 60px;
@@ -18,6 +18,10 @@ svg {
   }
 
   .sidemenu {
+    opacity: 0.8;
+  }
+
+  .sidemenu-hidden {
     display: none;
   }
 

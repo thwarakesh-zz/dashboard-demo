@@ -1,6 +1,8 @@
 <app-navbar></app-navbar>
-<i class="fas fa-bars"></i>
-<div class="sidemenu">
+<div class="sidemenu-toggler" (click)="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div>
+<div [ngClass]="{'sidemenu':true, 'sidemenu-hidden': sideMenu_hidden}">
   <app-side-menu *ngIf="loggedIn"></app-side-menu>
 </div>
 <app-login *ngIf="!loggedIn"></app-login>
