@@ -15,15 +15,15 @@ export class AuthService {
   constructor(public http: HttpClient) {
   }
 
-  getLoggedInStatus(){
+  getLoggedInStatus() {
     return this.loggedIn;
   }
 
-  getUser(){
+  getUser() {
     return this.user;
   }
 
-  login(username: string, password: string):Observable<any>{
+  login(username: string, password: string): Observable<any> {
 
     return this.http.post('http://127.0.0.1:8000/rest-auth/login/', {
         'username': username,
@@ -35,26 +35,26 @@ export class AuthService {
           this.user.emit(username);
         }),
         catchError(this.handleError('login', {}))
-      )
+      );
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       return of(result as T);
-    }
+    };
   }
 
-  logout(): Observable<any>{
+  logout(): Observable<any> {
     return this.http.post('http://127.0.0.1:8000/rest-auth/logout/', {}).pipe(
-      map(res=> {
-        if (res['detail'] == 'Successfully logged out.'){
+      map(res => {
+        if (res['detail'] === 'Successfully logged out.') {
           console.log('logging Out');
           this.token = null;
           this.loggedIn.emit(false);
           this.user.emit(null);
         }
       })
-    )
+    );
   }
 
 }
