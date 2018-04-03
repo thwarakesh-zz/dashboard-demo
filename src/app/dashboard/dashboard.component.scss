@@ -43,7 +43,7 @@
 @media only screen and (max-width: 1200px) {
   .chart-main {
     margin: 1%;
-    width: 100%;
+    width: 98%;
     background-color: white;
     border-radius: 5px;
     height: 500px;
@@ -53,11 +53,29 @@
   
   .chart-sub {
     margin: 1%;
-    width: 100%;
+    width: 98%;
     background-color: white;
     border-radius: 5px;
     height: 500px;
     box-shadow: 2px 0 3px rgba(0,0,0,.5);
     min-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .key-figure {
+    width: 48%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+
+  .key-figures {
+    margin-left: 10%;
+    flex-direction: column;
+  }
+  .key-figure {
+    width: 100%;
+    align-self: center
   }
 }
