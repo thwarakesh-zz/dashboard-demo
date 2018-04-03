@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loggedIn = false;
+    this.loggedIn = true; // Used to change the loggedin view during development
     this.auth.getLoggedInStatus().subscribe(res => {
       this.loggedIn = res;
     });

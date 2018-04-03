@@ -14,3 +14,50 @@
   box-shadow: 2px 0 3px rgba(0,0,0,.5);
   margin-bottom: 1%;
 }
+
+.chart-area {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chart-main {
+  margin: 1%;
+  width: 48%;
+  background-color: white;
+  border-radius: 5px;
+  height: 500px;
+  box-shadow: 2px 0 3px rgba(0,0,0,.5);
+  min-width: 400px;
+}
+
+.chart-sub {
+  margin: 1%;
+  width: 48%;
+  background-color: white;
+  border-radius: 5px;
+  height: 500px;
+  box-shadow: 2px 0 3px rgba(0,0,0,.5);
+  min-width: 400px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .chart-main {
+    margin: 1%;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    height: 500px;
+    box-shadow: 2px 0 3px rgba(0,0,0,.5);
+    min-width: 400px;
+  }
+  
+  .chart-sub {
+    margin: 1%;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    height: 500px;
+    box-shadow: 2px 0 3px rgba(0,0,0,.5);
+    min-width: 400px;
+  }
+}
