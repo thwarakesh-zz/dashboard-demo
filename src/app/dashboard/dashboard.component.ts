@@ -105,27 +105,27 @@ export class DashboardComponent implements OnInit {
     'data': [
         {
             'label': 'India',
-            'value': '880000',
+            'value': '8',
             'link': 'India'
         },
         {
             'label': 'Vietnam',
-            'value': '730000',
+            'value': '7',
             'link': 'Vietnam'
         },
         {
             'label': 'Sri Lanka',
-            'value': '590000',
+            'value': '8',
             'link': 'Sri%20Lanka'
         },
         {
             'label': 'Philipines',
-            'value': '520000',
+            'value': '5',
             'link': 'Philipines'
         },
         {
             'label': 'Bangaladesh',
-            'value': '330000',
+            'value': '3',
             'link': 'Bangaladesh'
         }
     ]
