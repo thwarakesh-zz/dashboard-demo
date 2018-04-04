@@ -3,7 +3,7 @@
     <div *ngFor="let item of menu_items">
       <div class="menu-item">
         <div>
-          {{item.name}}
+          <a href="{{item.name}}">{{item.name}}</a>
         </div>
         <div *ngIf="item.sub_items" (click)="toggleSub()">
             <i class="fas fa-chevron-down"></i>
@@ -12,7 +12,9 @@
       <div *ngIf="item.sub_items && !sub_hidden">
         <div *ngFor="let sub_item of item.sub_items">
           <div class="menu-item sub">
-            <div>{{sub_item.name}}</div>
+            <div>
+              <a href="{{sub_item.name}}">{{sub_item.name}}</a>
+            </div>
             <div *ngIf="sub_item.deep" (click)="toggleDeep()">
               <i class="fas fa-chevron-down"></i>
             </div>
@@ -20,7 +22,9 @@
           <div *ngIf="sub_item.deep && !deep_hidden">
               <div *ngFor="let deep of sub_item.deep">
                 <div class="menu-item deep">
-                  <div>{{deep.name}}</div>
+                  <div>
+                    <a href="{{deep.name}}">{{deep.name}}</a>
+                  </div>
                 </div>
               </div>
           </div>
