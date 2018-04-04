@@ -46,23 +46,28 @@ export class DashboardComponent implements OnInit {
         'data': [
             {
                 'label': 'India',
-                'value': '880000'
+                'value': '880000',
+                'link': 'India'
             },
             {
                 'label': 'Vietnam',
-                'value': '730000'
+                'value': '730000',
+                'link': 'Vietnam'
             },
             {
                 'label': 'Sri Lanka',
-                'value': '590000'
+                'value': '590000',
+                'link': 'Sri%20Lanka'
             },
             {
                 'label': 'Philipines',
-                'value': '520000'
+                'value': '520000',
+                'link': 'Philipines'
             },
             {
                 'label': 'Bangaladesh',
-                'value': '330000'
+                'value': '330000',
+                'link': 'Bangaladesh'
             }
         ]
     };
@@ -70,7 +75,7 @@ export class DashboardComponent implements OnInit {
     this.dataSource_sub = {
       'chart': {
         'caption': 'Revenue',
-        'subCaption': 'Revenue Across All Locations',
+        'subCaption': 'Revenue Across All Sectorss',
           'numberprefix': '$',
           'theme': 'ocean'
       },
@@ -93,30 +98,35 @@ export class DashboardComponent implements OnInit {
   this.dataSource_main2 = {
     'chart': {
         'caption': 'Gross Profit',
-        'subCaption': 'GP Accross all sectors',
+        'subCaption': 'GP Accross all Sectors',
         'numbersuffix': '%',
         'theme': 'ocean'
     },
     'data': [
         {
             'label': 'India',
-            'value': '6'
+            'value': '880000',
+            'link': 'India'
         },
         {
             'label': 'Vietnam',
-            'value': '7'
+            'value': '730000',
+            'link': 'Vietnam'
         },
         {
             'label': 'Sri Lanka',
-            'value': '10'
+            'value': '590000',
+            'link': 'Sri%20Lanka'
         },
         {
             'label': 'Philipines',
-            'value': '8'
+            'value': '520000',
+            'link': 'Philipines'
         },
         {
             'label': 'Bangaladesh',
-            'value': '3'
+            'value': '330000',
+            'link': 'Bangaladesh'
         }
     ]
 };
@@ -124,7 +134,7 @@ export class DashboardComponent implements OnInit {
 this.dataSource_sub2 = {
   'chart': {
     'caption': 'Gross Profit',
-    'subCaption': 'GP Across all Locations',
+    'subCaption': 'GP Across all Sectors',
     'numbersuffix': '%',
     'theme': 'ocean'
   },
