@@ -20,8 +20,21 @@ $space-color: #f0f3f4;
 
 .menu-item {
   padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10%;
 }
 
 .menu-item:hover {
   background-color: $secondary-color;
+}
+
+.sub {
+  font-size: 14px;
+  padding-left: 10%
+}
+
+.deep {
+  font-size: 13px;  
+  padding-left: 15%;
 }

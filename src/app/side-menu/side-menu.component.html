@@ -1,10 +1,31 @@
 <div class="sidemenu">
   <div class="sidemenu-content">
-    <div class="menu-item active">Master</div>
-    <div class="menu-item">KPI Dashboard</div>
-    <div class="menu-item">Mini Dashboard</div>
-    <div class="menu-item">Situation Report</div>
-    <div class="menu-item">Periodic Report</div>
-    <div class="menu-item"></div>
+    <div *ngFor="let item of menu_items">
+      <div class="menu-item">
+        <div>
+          {{item.name}}
+        </div>
+        <div *ngIf="item.sub_items" (click)="toggleSub()">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+      <div *ngIf="item.sub_items && !sub_hidden">
+        <div *ngFor="let sub_item of item.sub_items">
+          <div class="menu-item sub">
+            <div>{{sub_item.name}}</div>
+            <div *ngIf="sub_item.deep" (click)="toggleDeep()">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          <div *ngIf="sub_item.deep && !deep_hidden">
+              <div *ngFor="let deep of sub_item.deep">
+                <div class="menu-item deep">
+                  <div>{{deep.name}}</div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
