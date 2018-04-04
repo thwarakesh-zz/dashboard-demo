@@ -7,9 +7,21 @@
 
 <div class="chart-area">
   <div class="chart-main">
-    <app-chart-bar3d></app-chart-bar3d>
+    <app-chart-bar3d 
+    [dataSource]="dataSource_main"
+    [id]="main_id"
+    [width]="main_width"
+    [height]="main_height"
+    [type]="main_type"
+    ></app-chart-bar3d>
   </div>
   <div class="chart-sub">
-    <app-chart-bar3d></app-chart-bar3d>
+    <app-chart-bar3d 
+    [dataSource]="dataSource_sub" 
+    [id]="sub_id"
+    [width]="sub_width"
+    [height]="sub_height"
+    [type]="sub_type"
+    ></app-chart-bar3d>
   </div>
 </div>

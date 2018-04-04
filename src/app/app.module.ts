@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 // FusionChart Requiements
 import * as FusionCharts from 'fusioncharts';
 import * as Charts from 'fusioncharts/fusioncharts.charts';
-import * as FintTheme from 'fusioncharts/themes/fusioncharts.theme.fint';
+// import * as FintTheme from 'fusioncharts/themes/fusioncharts.theme.fint';
+import * as ocean from 'fusioncharts/themes/fusioncharts.theme.ocean';
 import { FusionChartsModule } from 'angular4-fusioncharts';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -20,7 +21,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MessageService } from './message.service';
 import { ChartBar3dComponent } from './chart-bar3d/chart-bar3d.component';
 
-FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
+FusionChartsModule.fcRoot(FusionCharts, Charts, ocean);
 @NgModule({
   declarations: [
     AppComponent,
