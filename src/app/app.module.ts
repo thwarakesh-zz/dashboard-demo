@@ -1,5 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+// FusionChart Requiements
+import * as FusionCharts from 'fusioncharts';
+import * as Charts from 'fusioncharts/fusioncharts.charts';
+import * as FintTheme from 'fusioncharts/themes/fusioncharts.theme.fint';
+import { FusionChartsModule } from 'angular4-fusioncharts';
+
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
@@ -11,20 +18,23 @@ import { AuthService } from './auth.service';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MessageService } from './message.service';
+import { ChartBar3dComponent } from './chart-bar3d/chart-bar3d.component';
 
-
+FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SideMenuComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    ChartBar3dComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FusionChartsModule
   ],
   providers: [
     AuthService,
