@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth.service';
+import { CookieService } from 'angular2-cookie/services/cookies.service';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +10,17 @@ import { AuthService } from './auth.service';
 export class AppComponent implements OnInit {
   loggedIn: boolean;
   sideMenu_hidden = true;
-  constructor(public auth: AuthService) {
+  constructor(public auth: AuthService, public cookieService: CookieService) {
   }
 
   ngOnInit() {
-    this.loggedIn = true; // Used to change the loggedin view during development
+    this.loggedIn = false; // Used to change the loggedin view during development
     this.auth.getLoggedInStatus().subscribe(res => {
       this.loggedIn = res;
     });
+    if (this.cookieService.get('user')) {
+      this.loggedIn = true;
+    }
   }
 
   toggleMenu() {

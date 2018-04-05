@@ -6,6 +6,8 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { MessageService } from './message.service';
 
+import { CookieService } from 'angular2-cookie/services/cookies.service';
+
 @Injectable()
 export class AuthService {
 
@@ -13,7 +15,7 @@ export class AuthService {
   @Output() user: EventEmitter<string> = new EventEmitter();
   @Output() loggedIn: EventEmitter<boolean> = new EventEmitter();
 
-  constructor(public http: HttpClient, public message: MessageService) {
+  constructor(public http: HttpClient, public message: MessageService, public cookieService: CookieService) {
   }
 
   getLoggedInStatus() {
@@ -34,6 +36,9 @@ export class AuthService {
           this.token = res['key'];
           this.loggedIn.emit(true);
           this.user.emit(username);
+
+          this.cookieService.put('user', username);
+          this.cookieService.put('token', res['key']);
         }),
         catchError(this.handleError('login', {}))
       );
@@ -54,9 +59,10 @@ export class AuthService {
           this.token = null;
           this.loggedIn.emit(false);
           this.user.emit(null);
+
+          this.cookieService.remove('user');
         }
       })
     );
   }
-
 }

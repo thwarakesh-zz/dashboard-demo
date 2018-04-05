@@ -21,6 +21,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MessageService } from './message.service';
 import { ChartBar3dComponent } from './chart-bar3d/chart-bar3d.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { CookieService } from 'angular2-cookie/services/cookies.service';
 
 FusionChartsModule.fcRoot(FusionCharts, Charts, ocean);
 @NgModule({
@@ -42,6 +43,7 @@ FusionChartsModule.fcRoot(FusionCharts, Charts, ocean);
   providers: [
     AuthService,
     MessageService,
+    CookieService,
   ],
   bootstrap: [AppComponent]
 })

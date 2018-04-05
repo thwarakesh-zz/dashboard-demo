@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { CookieService } from 'angular2-cookie/services/cookies.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +11,7 @@ export class NavbarComponent implements OnInit {
   loggedIn: boolean;
   user: string;
 
-  constructor(public auth: AuthService) { }
+  constructor(public auth: AuthService, public cookieService: CookieService) { }
 
   ngOnInit() {
     this.auth.getLoggedInStatus().subscribe(res => {
@@ -20,6 +21,11 @@ export class NavbarComponent implements OnInit {
     this.auth.getUser().subscribe(res => {
       this.user = res;
     });
+
+    if (this.cookieService.get('user')) {
+      this.loggedIn = true;
+      this.user = this.cookieService.get('user');
+    }
   }
 
   logout() {
