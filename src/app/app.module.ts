@@ -20,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MessageService } from './message.service';
 import { ChartBar3dComponent } from './chart-bar3d/chart-bar3d.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 FusionChartsModule.fcRoot(FusionCharts, Charts, ocean);
 @NgModule({
@@ -35,7 +36,8 @@ FusionChartsModule.fcRoot(FusionCharts, Charts, ocean);
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    FusionChartsModule
+    FusionChartsModule,
+    AngularFontAwesomeModule
   ],
   providers: [
     AuthService,

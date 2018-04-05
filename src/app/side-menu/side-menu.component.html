@@ -3,6 +3,7 @@
     <div *ngFor="let item of menu_items">
       <div class="menu-item">
         <div>
+            <fa [name]="item.icon"></fa>
           <a href="{{item.name}}">{{item.name}}</a>
         </div>
         <div *ngIf="item.sub_items" (click)="toggleSub()">

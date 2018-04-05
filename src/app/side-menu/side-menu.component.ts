@@ -12,8 +12,10 @@ export class SideMenuComponent implements OnInit {
   menu_items = [
     {
       name: 'Overall',
+      icon: 'home',
     }, {
       name: 'Regional',
+      icon: 'map-marker-alt',
       sub_items: [
         {
           name: 'India',
@@ -43,7 +45,8 @@ export class SideMenuComponent implements OnInit {
         }
       ]
     }, {
-      name: 'Customer'
+      name: 'Customer',
+      icon: 'user',
     }
   ];
 
