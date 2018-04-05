@@ -66,7 +66,7 @@ export class DashboardComponent implements OnInit {
             },
             {
                 'label': 'Bangaladesh',
-                'value': String(400000 + Math.round(Math.random() * 400000))
+                'value': String(400000 + Math.round(Math.random() * 400000)),
                 'link': 'Bangaladesh'
             }
         ]
@@ -145,7 +145,7 @@ this.dataSource_sub2 = {
       },
       {
           'label': 'Sea Freight',
-          'value':String(3 + Math.round(Math.random() * 8))
+          'value': String(3 + Math.round(Math.random() * 8))
       },
       {
           'label': 'Inland Logistics',
