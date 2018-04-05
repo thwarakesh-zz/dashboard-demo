@@ -46,27 +46,27 @@ export class DashboardComponent implements OnInit {
         'data': [
             {
                 'label': 'India',
-                'value': '880000',
+                'value': String(400000 + Math.round(Math.random() * 400000)),
                 'link': 'India'
             },
             {
                 'label': 'Vietnam',
-                'value': '730000',
+                'value': String(400000 + Math.round(Math.random() * 400000)),
                 'link': 'Vietnam'
             },
             {
                 'label': 'Sri Lanka',
-                'value': '590000',
+                'value': String(400000 + Math.round(Math.random() * 400000)),
                 'link': 'Sri%20Lanka'
             },
             {
                 'label': 'Philipines',
-                'value': '520000',
+                'value': String(400000 + Math.round(Math.random() * 400000)),
                 'link': 'Philipines'
             },
             {
                 'label': 'Bangaladesh',
-                'value': '330000',
+                'value': String(400000 + Math.round(Math.random() * 400000))
                 'link': 'Bangaladesh'
             }
         ]
@@ -82,15 +82,15 @@ export class DashboardComponent implements OnInit {
       'data': [
           {
               'label': 'Air Frieght',
-              'value': '880000'
+              'value': String(400000 + Math.round(Math.random() * 400000))
           },
           {
               'label': 'Sea Freight',
-              'value': '730000'
+              'value': String(400000 + Math.round(Math.random() * 400000))
           },
           {
               'label': 'Inland Logistics',
-              'value': '590000'
+              'value': String(400000 + Math.round(Math.random() * 400000))
           },
       ]
   };
@@ -105,27 +105,27 @@ export class DashboardComponent implements OnInit {
     'data': [
         {
             'label': 'India',
-            'value': '8',
+            'value': String(3 + Math.round(Math.random() * 8)),
             'link': 'India'
         },
         {
             'label': 'Vietnam',
-            'value': '7',
+            'value': String(3 + Math.round(Math.random() * 8)),
             'link': 'Vietnam'
         },
         {
             'label': 'Sri Lanka',
-            'value': '8',
+            'value': String(3 + Math.round(Math.random() * 8)),
             'link': 'Sri%20Lanka'
         },
         {
             'label': 'Philipines',
-            'value': '5',
+            'value': String(3 + Math.round(Math.random() * 8)),
             'link': 'Philipines'
         },
         {
             'label': 'Bangaladesh',
-            'value': '3',
+            'value': String(3 + Math.round(Math.random() * 8)),
             'link': 'Bangaladesh'
         }
     ]
@@ -141,16 +141,15 @@ this.dataSource_sub2 = {
   'data': [
       {
           'label': 'Air Frieght',
-          'value': '9',
-          'link': 'www.google.com'
+          'value': String(3 + Math.round(Math.random() * 8)),
       },
       {
           'label': 'Sea Freight',
-          'value': '8'
+          'value':String(3 + Math.round(Math.random() * 8))
       },
       {
           'label': 'Inland Logistics',
-          'value': '16'
+          'value': String(3 + Math.round(Math.random() * 8))
       },
   ]
 };
